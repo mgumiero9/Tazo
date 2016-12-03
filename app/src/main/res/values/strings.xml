@@ -2,7 +2,7 @@
     <string name="app_name">Firebase UI</string>
 
     <string name="name_chat">ChatActivity</string>
-    <string name="name_auth_ui">Auth UI demo</string>
+    <string name="name_auth_ui">Tazo</string>
     <string name="name_image">Storage Image Demo</string>
 
     <string name="desc_chat">Demonstrates using a FirebaseRecyclerAdapter to load data from Firebase Database into a RecyclerView for a basic chat app.</string>
