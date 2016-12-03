@@ -1,0 +1,10 @@
+.gradle
+/local.properties
+.idea
+.DS_Store
+/build
+/captures
+/library/target
+/**/*.iml
+google-services.json
+build/
