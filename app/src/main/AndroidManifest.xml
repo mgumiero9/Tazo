@@ -12,14 +12,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChooserActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-            <meta-data
-                android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts"/>
+        <activity
+            android:name=".ChooserActivity"
+            android:label="Chooser Activity">
         </activity>
 
         <!-- Chat demo -->
@@ -30,7 +25,15 @@
         <!-- Auth UI demo -->
         <activity
             android:name=".auth.AuthUiActivity"
-            android:label="@string/name_auth_ui"/>
+            android:label="@string/name_auth_ui">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity>
         <activity
             android:name=".auth.SignedInActivity"
             android:label="@string/name_auth_ui"/>
