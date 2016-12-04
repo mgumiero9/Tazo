@@ -46,7 +46,7 @@
             android:name=".storage.ImageActivity"
             android:label="@string/name_image" />
         <activity
-            android:name=".Tutorial"
+            android:name=".TutorialActivity"
             android:label="@string/title_activity_tutorial"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
