@@ -1,5 +1,6 @@
 package com.firebase.uidemo;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,7 +15,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class TutorialActivity extends AppCompatActivity {
+import com.firebase.uidemo.View.TutorialFragment1;
+import com.firebase.uidemo.View.TutorialFragment2;
+import com.firebase.uidemo.View.TutorialFragment3;
+
+public class TutorialActivity extends AppCompatActivity
+        implements TutorialFragment1.OnFragmentInteractionListener,
+                    TutorialFragment2.OnFragmentInteractionListener,
+                    TutorialFragment3.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -81,6 +89,11 @@ public class TutorialActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -130,7 +143,20 @@ public class TutorialActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+
+            // return PlaceholderFragment.newInstance(position + 1);
+
+            switch (position) {
+                case 0:
+                    return new TutorialFragment1();
+                case 1:
+                    return new TutorialFragment2();
+                case 2:
+                    return new TutorialFragment3();
+                default:
+                    break;
+            }
+            return null;
         }
 
         @Override
