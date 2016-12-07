@@ -14,7 +14,6 @@ import com.firebase.uidemo.auth.AuthUiActivity;
  * tutorial.
  */
 public class SplashActivity extends AppCompatActivity {
-    public static final String PREFS_NAME = "MyPrefsFile";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
