@@ -19,6 +19,9 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /**
+         * This block restores SharedPreferences to read how many times the app was launched.
+         */
         String myCounter = "";
         SharedPreferences myPreferences = getPreferences(0);
         int launchCounter = myPreferences.getInt(myCounter,0);
@@ -30,6 +33,9 @@ public class SplashActivity extends AppCompatActivity {
             intent = new Intent(this, TutorialActivity.class);
         }
 
+        /**
+         * This block increments launchCounter counter and save it persistently.
+         */
         launchCounter++;
         SharedPreferences.Editor editor = myPreferences.edit();
         editor.putInt(myCounter, launchCounter)
